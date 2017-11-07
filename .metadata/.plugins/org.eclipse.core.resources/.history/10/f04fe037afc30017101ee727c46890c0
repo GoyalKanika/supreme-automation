@@ -1,0 +1,22 @@
+package com.uiAutomation.Flipkart.uiAction;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
+
+import com.uiAutomation.Flipkart.TestBase.HelperUtility;
+
+public class TestPage_uiPage extends HelperUtility{
+	
+	public TestPage_uiPage(WebDriver driver){
+		this.driver=driver;
+		PageFactory.initElements(driver, this.getClass());
+	}
+	
+	@FindBy(how=How.LINK_TEXT, using ="/account/login?ret=/")
+	WebElement loginLink;
+	public void loginToFlipkart(){
+		
+	}
+
+}

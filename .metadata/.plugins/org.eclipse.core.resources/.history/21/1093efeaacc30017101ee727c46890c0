@@ -1,0 +1,30 @@
+package com.uiAutomation.Flipkart.TestBase;
+
+import org.openqa.selenium.WebDriver;
+
+public class HelperUtility {
+
+	public WebDriver driver;
+	
+	String browser;
+	String URL;
+	
+	public void launchBrowser(){
+		
+	}
+	
+	public void getBrowser(String browser){
+		
+		if(browser.equalsIgnoreCase("chrome")){
+			System.setProperty("webdriver.chrome.driver","C://Program Files (x86)//eclipse/Webdriver//chromedriver.exe");
+			driver = new ChromeDriver();
+		}
+		
+		
+	}
+	
+	public void getURL(){
+		
+	}
+	
+}

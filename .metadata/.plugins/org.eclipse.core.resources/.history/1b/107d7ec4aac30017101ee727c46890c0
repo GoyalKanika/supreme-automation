@@ -1,0 +1,15 @@
+package com.uiAutomation.Flipkart.uiAction;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+public class TestPage_uiPage {
+	WebDriver driver;
+	public TestPage_uiPage(WebDriver driver){
+		this.driver=driver;
+		PageFactory.initElements(driver, this.getClass());
+	}
+	
+	
+
+}

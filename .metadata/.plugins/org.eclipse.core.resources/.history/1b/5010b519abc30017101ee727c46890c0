@@ -1,0 +1,22 @@
+package com.uiAutomation.Flipkart.TestBase;
+
+public class HelperUtility {
+
+	public Webdriver driver;
+	
+	String browser;
+	String URL;
+	
+	public void launchBrowser(){
+		
+	}
+	
+	public void getBrowser(){
+		
+	}
+	
+	public void getURL(){
+		
+	}
+	
+}
