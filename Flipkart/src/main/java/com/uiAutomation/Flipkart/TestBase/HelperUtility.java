@@ -3,12 +3,14 @@ package com.uiAutomation.Flipkart.TestBase;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import com.uiAutomation.Flipkart.ExcelReader.Excel_reader;
+import com.uiAutomation.Flipkart.Screenshot.screenshot;
 
 public class HelperUtility {
 
@@ -17,6 +19,7 @@ public class HelperUtility {
 	String browser="chrome";
 	String URL="https://www.flipkart.com/";
 	Excel_reader loadexcel;
+	screenshot Screen;
 	
 	public void launchBrowser() throws InterruptedException{
 		getBrowser(browser);
@@ -53,6 +56,11 @@ public class HelperUtility {
 		String data[][]= loadexcel.getExceldata(Sheetname, ExcelName);
 		return data;
 		
+	}
+	
+	public void captureScrenshot(String path) throws IOException{
+		Screen = new screenshot(driver);		
+		Screen.takescreenshot(path);
 	}
 	
 }
