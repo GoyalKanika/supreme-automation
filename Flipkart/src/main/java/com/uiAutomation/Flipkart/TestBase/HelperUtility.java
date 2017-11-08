@@ -1,5 +1,6 @@
 package com.uiAutomation.Flipkart.TestBase;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -7,16 +8,20 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
+import com.uiAutomation.Flipkart.ExcelReader.Excel_reader;
+
 public class HelperUtility {
 
 	public WebDriver driver;
 	
 	String browser="chrome";
 	String URL="https://www.flipkart.com/";
+	Excel_reader loadexcel;
 	
-	public void launchBrowser(){
+	public void launchBrowser() throws InterruptedException{
 		getBrowser(browser);
 		getURL(URL);
+		Thread.sleep(1000);
 	}
 	
 	public void getBrowser(String browser){
@@ -39,6 +44,15 @@ public class HelperUtility {
 		driver.get(URL);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(3000, TimeUnit.SECONDS);		
+	}
+	
+	public String[][] loadTestData(String ExcelName,String Sheetname) throws IOException{
+		
+		String path = "E:/supreme-automation/Flipkart/src/main/java/com/uiAutomation/Flipkart/data/"+ ExcelName;
+		loadexcel = new Excel_reader(path);
+		String data[][]= loadexcel.getExceldata(Sheetname, ExcelName);
+		return data;
+		
 	}
 	
 }
