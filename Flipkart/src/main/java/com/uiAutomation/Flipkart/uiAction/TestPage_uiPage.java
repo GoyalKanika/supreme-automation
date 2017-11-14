@@ -34,10 +34,10 @@ public class TestPage_uiPage extends HelperUtility{
 	@FindBy(how=How.XPATH, using ="//span[contains(text(),'New to Flipkart? Sign up')]")
 	WebElement signUp_loginWindow;
 	
-	@FindBy(how=How.XPATH, using ="//a[@title='Electronics']/span")
+	@FindBy(how=How.XPATH, using ="//a[@title='Electronics']")
 	WebElement Elex;
 	
-	@FindBy(how=How.XPATH, using ="//a[@title='Mobiles']/span[1]")
+	@FindBy(how=How.XPATH, using ="//a[@title='Mobiles']")
 	WebElement Mobile;
 	
 	
@@ -56,7 +56,7 @@ public class TestPage_uiPage extends HelperUtility{
 		Actions builder = new Actions(driver);
 		builder.moveToElement(Elex).perform();
 		
-		WebDriverWait wait = new WebDriverWait(driver, 5);
+		WebDriverWait wait = new WebDriverWait(driver, 15);
 		wait.until(ExpectedConditions.visibilityOf(Mobile));
 		Mobile.click();
 		driver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);

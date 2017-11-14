@@ -6,7 +6,7 @@
       <class name="com.uiAutomation.Flipkart.homepage.TestCase_Login">
         <methods>
           <include name="endTest"/>
-          <include name="login"/>
+          <include name="login" invocation-numbers="0"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.uiAutomation.Flipkart.homepage.TestCase_Login -->
