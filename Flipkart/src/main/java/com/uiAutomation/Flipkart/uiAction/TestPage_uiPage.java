@@ -2,6 +2,7 @@ package com.uiAutomation.Flipkart.uiAction;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -40,6 +41,9 @@ public class TestPage_uiPage extends HelperUtility{
 	@FindBy(how=How.XPATH, using ="//a[@title='Mobiles']")
 	WebElement Mobile;
 	
+	@FindBy(how=How.XPATH, using ="//a[contains(text(),'Hi')]")
+	WebElement logoutdisplay;
+	
 	
 	
 	
@@ -48,7 +52,8 @@ public class TestPage_uiPage extends HelperUtility{
 		enterEmail.sendKeys(emailaddress);
 		enterPassword.sendKeys(password);
 		loginButton.click();
-		driver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
+		
 	}
 	
 	public void hoverfunctionality(){
@@ -60,6 +65,21 @@ public class TestPage_uiPage extends HelperUtility{
 		wait.until(ExpectedConditions.visibilityOf(Mobile));
 		Mobile.click();
 		driver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
+	}
+	
+	public void clickOnNavigationMenu(String menu, String subMenu){
+		WebElement selectMenu = driver.findElement(By.xpath(".//a[@title='" +menu+ "']"));
+		WebElement selectItem = driver.findElement(By.xpath(".//a[@title='" +subMenu+ "']"));
+		
+		
+		//wait.until(ExpectedConditions.visibilityOf(logoutdisplay));
+		Actions builder = new Actions(driver);
+		builder.moveToElement(selectMenu).perform();
+		WebDriverWait wait = new WebDriverWait(driver, 15);
+		wait.until(ExpectedConditions.visibilityOf(selectItem));
+		selectItem.click();
+		driver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
+		
 	}
 
 }

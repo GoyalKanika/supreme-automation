@@ -3,7 +3,8 @@ package com.uiAutomation.Flipkart.TestBase;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -11,9 +12,11 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import com.uiAutomation.Flipkart.ExcelReader.Excel_reader;
 import com.uiAutomation.Flipkart.Screenshot.screenshot;
+import com.uiAutomation.Flipkart.homepage.TestCase_Login;
 
 public class HelperUtility {
 
+	public static final Logger log	=Logger.getLogger(HelperUtility.class.getName());
 	public WebDriver driver;
 	
 	String browser="chrome";
@@ -25,6 +28,8 @@ public class HelperUtility {
 		getBrowser(browser);
 		getURL(URL);
 		Thread.sleep(1000);
+		String log4jConfPath = "log4j.properties";
+		PropertyConfigurator.configure(log4jConfPath);
 	}
 	
 	public void getBrowser(String browser){
