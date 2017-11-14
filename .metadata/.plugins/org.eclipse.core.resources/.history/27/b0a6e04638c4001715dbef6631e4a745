@@ -1,0 +1,36 @@
+package com.uiAutomation.Flipkart.ExcelReader;
+
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class Excel_reader {
+	
+	String path;
+	FileInputStream fis;
+	XSSFWorkbook workbook;
+	XSSFSheet sheet;
+	XSSFRow rows;
+	XSSFCell cell;
+	
+	
+	public Excel_reader(String path){
+		this.path = path;
+		
+		//workbook = 
+		
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+}

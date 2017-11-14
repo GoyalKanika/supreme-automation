@@ -1,0 +1,9 @@
+package com.uiAutomation.Flipkart.Screenshot;
+
+public class screenshot {
+	String path;
+	public screenshot(String path){
+		this.path=path;
+	}
+
+}
