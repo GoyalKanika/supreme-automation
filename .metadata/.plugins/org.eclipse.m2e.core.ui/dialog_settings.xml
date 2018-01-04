@@ -44,6 +44,8 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="E:\supreme-automation\Cucumber"/>
+			<item value="E:\supreme-automation\.metadata\.plugins\org.eclipse.jdt.ui\jdt-images\0.png"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -56,12 +58,20 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="uiAutomation.cucumber"/>
+			<item value="uiAutomation.Cucmber"/>
+			<item value="uiAutomation.CucumberDemo"/>
+			<item value="uiAutomation.TPSCucumberdemo"/>
 			<item value="uiAutomation.Flipkart"/>
 		</list>
 		<list key="groupId">
 			<item value="uiAutomation"/>
 		</list>
 		<list key="artifactId">
+			<item value="cucumber"/>
+			<item value="Cucmber"/>
+			<item value="CucumberDemo"/>
+			<item value="TPSCucumberdemo"/>
 			<item value="Flipkart"/>
 		</list>
 		<list key="projectNameTemplate">
