@@ -19,26 +19,19 @@ public class ArrayFunctions {
 		for(int number :intfunc1){
 			System.out.println("at index: "+number);
 		}
-		System.out.println("Array afetr .tostring is: ");
+		System.out.println("Array after .tostring is: ");
 		
 		System.out.println("At index: "+ Arrays.toString(intfunc1));
-		
-		
 	}
 	
 	public static void checkFillFunctionality(){
 		 Arrays.fill(intfunc1, 10);
 		 System.out.println("Arrays.Fills fills all the values in intfunc1 by : " +Arrays.toString(intfunc1));
-		 
-	 }
-	
-	
+	}
 	public static void main(String[] args) {
 		checkEqualsFunctionality();
 		checktoStringFunct();
 		checkFillFunctionality();
 		
 	}
-	
-
 }
